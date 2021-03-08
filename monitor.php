@@ -1,3 +1,6 @@
+<?php
+include "conexion.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,31 +22,26 @@
     <!-- Image and text -->
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="radar.png" alt="" width="50" height="35" class="d-inline-block align-top">
         Radar Custom&Logistics  
       </a>
-      <a class="nav-link" href="computadora.html">
-          Computadora
-      </a>
-      <a class="nav-link" href="monitor.html">
-        Monitor
-    </a>
-    <a class="nav-link" href="ups.html">
-        UPS
-    </a>
-    <a class="nav-link" href="telefono.html">
-        Telefono
-    </a>
-    <a class="nav-link" href="router.html">
-      
-        Router
-    </a>
-    <a class="nav-link" href="impresora.html"> Impresora</a>
+      <a class="nav-link" href="computadora.php">Computadora</a>
+            <a class="nav-link" href="monitor.php">Monitor</a>
+            <a class="nav-link" href="ups.php">UPS</a>
+            <a class="nav-link" href="telefono.php">Telefono</a>
+            <a class="nav-link" href="router.php">Router</a>
+            <a class="nav-link" href="impresora.php">Impresora</a>
      
     </div>
     </nav>
+    <br><br>
+
     <div class="container">
+        <div>
+        <h2>Monitores en inventario  <button type="button" class="btn btn-success">Agregar</button></h2>
+       
+        </div>
         <table class="table table-bordered">
             <thead class="table-dark">
               <tr>
@@ -55,7 +53,24 @@
                 <th scope="col">Editar</th>
                 <th scope="col">Eliminar</th>
               </tr>
-            </thead>
+              </thead>
+              <?php
+              $sentencia="SELECT * FROM monitor";
+              $resultado=mysqli_query($conn,$sentencia);
+              while($filas=mysqli_fetch_assoc($resultado)){
+                  echo "<tr>";
+                  echo "<td>"; echo $filas['id']; echo "</td>";
+                  echo "<td>"; echo $filas['marca']; echo "</td>";
+                  echo "<td>"; echo $filas['modelo']; echo "</td>";
+                  echo "<td>"; echo $filas['numero_serie']; echo "</td>";
+                  echo "<td>"; echo $filas['estado']; echo "</td>";
+                  echo "<td> <button type='button' class='btn btn-warning'>Editar</button> </td>";
+                  echo "<td> <button type='button' class='btn btn-danger'>Eliminar</button> </td>";
+
+              }
+
+              ?>
+           
             <tbody>
             
             </tbody>

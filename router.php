@@ -19,27 +19,16 @@
     <!-- Image and text -->
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="radar.png" alt="" width="50" height="35" class="d-inline-block align-top">
         Radar Custom&Logistics  
       </a>
-      <a class="nav-link" href="computadora.html">
-          Computadora
-      </a>
-      <a class="nav-link" href="monitor.html">
-        Monitor
-    </a>
-    <a class="nav-link" href="ups.html">
-        UPS
-    </a>
-    <a class="nav-link" href="telefono.html">
-        Telefono
-    </a>
-    <a class="nav-link" href="router.html">
-      
-        Router
-    </a>
-    <a class="nav-link" href="impresora.html"> Impresora</a>
+      <a class="nav-link" href="computadora.php">Computadora</a>
+            <a class="nav-link" href="monitor.php">Monitor</a>
+            <a class="nav-link" href="ups.php">UPS</a>
+            <a class="nav-link" href="telefono.php">Telefono</a>
+            <a class="nav-link" href="router.php">Router</a>
+            <a class="nav-link" href="impresora.php">Impresora</a>
      
     </div>
     </nav>
@@ -63,6 +52,7 @@
           
          
     </div>
+    
   
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
